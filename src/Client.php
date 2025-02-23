@@ -141,6 +141,8 @@ class Client
             ]
         );
 
+        $response = json_decode((string) $response->getBody(), true);
+
         if (!isset($response['data']['reels_media'][0])) {
             return collect();
         }
