@@ -11,9 +11,7 @@
     "authors": [
         {
             "name": "Jesse James",
-            "email": "me@jworksuk.com",
-            "homepage": "https://github.com/jworksuk",
-            "role": "Developer"
+            "email": "me@jworksuk.com"
         }
     ],
     "require": {

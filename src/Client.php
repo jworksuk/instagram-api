@@ -65,7 +65,7 @@ class Client
             $user['edge_follow']['count'],
             $user['profile_pic_url'],
             $user['external_url'],
-            0,
+            $user['edge_owner_to_timeline_media']['count'] ?? 0,
             $user['is_private'],
             $user['is_verified'],
             !($user['business_category_name'] === null),
@@ -106,7 +106,7 @@ class Client
             $user['following_count'],
             $user['profile_pic_url'],
             $user['external_url'],
-            0,
+            $user['media_count'] ?? 0,
             $user['is_private'],
             $user['is_verified'],
             $user['is_business'],
@@ -205,6 +205,7 @@ class Client
 
     /**
      * @throws Exception|GuzzleException
+     * @deprecated
      */
     public function getMediaDetail(string $mediaLink): Media
     {
