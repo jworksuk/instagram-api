@@ -35,7 +35,7 @@ class Music implements Arrayable
         return $this->id;
     }
 
-    public function getArtistId(): int
+    public function getArtistId(): ?int
     {
         return $this->artistId;
     }
